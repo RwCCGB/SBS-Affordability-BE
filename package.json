@@ -4,34 +4,38 @@
   "description": "API for the affordability app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node dist/server.js",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
-    "lint": "eslint 'src/**/*.ts'"
+    "lint": "eslint 'src/**/*.ts'",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "cor": "^0.0.0",
     "express": "^5.1.0",
     "zod": "^4.0.17"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.3.0",
     "dotenv": "^17.2.1",
     "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
     "express": "^5.1.0",
     "install": "^0.13.0",
+    "jest": "^30.0.5",
     "nodemon": "^3.1.10",
     "npm": "^11.5.2",
     "prettier": "^3.6.2",
+    "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2",
-    "eslint-config-prettier": "^10.1.8",
     "tsx": "^4.20.4",
-    "@types/cors": "^2.8.19"
+    "typescript": "^5.9.2"
   }
 }
