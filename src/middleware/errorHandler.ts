@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
 
 interface CustomError {
-  status?: number,
-  msg?: string,
+  status?: number;
+  msg?: string;
 }
 
 export interface AppError extends Error {
@@ -28,7 +28,7 @@ export const schemaErrorHandler = (
 ) => {
   if (err.status === 400) {
     /*TODO: tidy this up: I don't think I've done it the correct way.*/
-    const customError : CustomError = err;
-    res.status(err.status).json({message: customError.msg });
+    const customError: CustomError = err;
+    res.status(err.status).json({ message: customError.msg });
   }
 };
