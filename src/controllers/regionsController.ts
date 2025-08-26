@@ -7,15 +7,9 @@ import config from '../config/config'
 export const regions = async (req: Request, res: Response, next: NextFunction) => {
 
   try {
-    let regions: Region[];
-    if(config.useMocks){
-      regions = await loadMock<Region[]>("getRegion");
-    }
-    else{
-      regions = [{id: 1, name: "Yorkshire & Humberside"}]
-    }
+    
     const service = getRegionService();
-    const data = service.getAll();
+    const data: Region[] = await service.getAll();
     res.json(data);
   } catch (error) {
     next(error);
