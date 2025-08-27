@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
 import { IncomeCategory } from '../models/categories/incomeCategory';
 import { ExpenditureCategory } from '../models/categories/expenditureCategory';
-
-export const incomeCategories = (
+import { getIncomeTypes } from '../services/factories/factory';
+export const incomeCategories = async (
   req: Request,
   res: Response,
   next: NextFunction,
@@ -15,7 +15,9 @@ export const incomeCategories = (
     },
   ];
   try {
-    res.json(categories);
+    const service = getIncomeTypes();
+    const data = await service.getAll();
+    res.json(data);
   } catch (error) {
     next(error);
   }

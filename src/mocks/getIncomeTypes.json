@@ -1,42 +1,52 @@
 [
     {
         "id": 1,
-        "Text": "Guaranteed Other (Before Deductions)"
+        "name": "Guaranteed Other (Before Deductions)",
+        "description": ""
     },
     {
         "id": 2,
-        "Text": "Non-Guaranteed Other (Before Deductions)"
+        "name": "Non-Guaranteed Other (Before Deductions)",
+        "description": ""
     },
     {
         "id": 3,
-        "Text": "Net Profit (Sole Trader/Partnership Co)"
+        "name": "Net Profit (Sole Trader/Partnership Co)",
+        "description": ""
     },
     {
         "id": 4,
-        "Text": "Dividends Received (Ltd Comp Only)"
+        "name": "Dividends Received (Ltd Comp Only)",
+        "description": ""
     },
     {
         "id": 5,
-        "Text": "Directors Remuneration (Ltd Comp Only)"
+        "name": "Directors Remuneration (Ltd Comp Only)",
+        "description": ""
     },
     {
         "id": 6,
-        "Text": "Benefit"
+        "name": "Benefit",
+        "description": ""
     },
     {
         "id": 7,
-        "Text": "Annual Pension (Before Deductions)"
+        "name": "Annual Pension (Before Deductions)",
+        "description": ""
     },
     {
         "id": 8,
-        "Text": "Maintenance"
+        "name": "Maintenance",
+        "description": ""
     },
     {
         "id": 9,
-        "Text": "Rental Profit Minus Finance Costs"
+        "name": "Rental Profit Minus Finance Costs",
+        "description": ""
     },
     {
         "id": 10,
-        "Text": "Contractor Income (Daily Rate X 5 X 48)"
+        "name": "Contractor Income (Daily Rate X 5 X 48)",
+        "description": ""
     }
 ]

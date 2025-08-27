@@ -4,6 +4,10 @@ import {loadMock} from "../../utils/fileReader"
 import { LiveRegionService } from "../regions/liveRegionService";
 import {Region} from "../../models/regions/region"
 
+import { LiveIncomeTypeService } from "../incometypes/liveIncomeTypesService";
+import { IncomeCategory } from "../../models/categories/incomeCategory";
+import { IncomeType } from "../incometypes/incomeTypesService";
+
 export function getRegionService() {
     if(config.useMocks){
         return {
@@ -13,4 +17,15 @@ export function getRegionService() {
         };
     }
     return new LiveRegionService();
+}
+
+export function getIncomeTypes(){
+    if(config.useMocks){
+        return{
+            async getAll() : Promise<IncomeType[]>{
+                return loadMock<IncomeType[]>("getIncomeTypes")
+            },
+        };
+    }
+    return new LiveIncomeTypeService();
 }
