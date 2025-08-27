@@ -9,7 +9,7 @@ export const regions = async (req: Request, res: Response, next: NextFunction) =
   try {
     
     const service = getRegionService();
-    const data: Region[] = await service.getAll();
+    const data = await service.getAll();
     res.json(data);
   } catch (error) {
     next(error);

@@ -1,14 +1,15 @@
-import { MockRegionService } from "../mockRegions/mockRegionService";
 import { LiveRegionService } from "../regions/liveRegionService";
-import type { RegionService } from "../regions/regionService";
+import {Region} from "../../models/regions/region"
+import config from "../../config/config";
+import {loadMock} from "../../utils/fileReader"
 
-const useMocks = process.env.IS_DEV === "1" || process.env.NODE_ENV === "dev";
-
-let singleton: RegionService | null = null;
-
-export function getRegionService(): RegionService {
-    if(!singleton){
-        singleton = useMocks ? new MockRegionService() : new LiveRegionService();
+export function getRegionService() {
+    if(config.useMocks){
+        return {
+            async getAll() : Promise<Region[]> {
+                return loadMock<Region[]>("getRegion")
+            },
+        };
     }
-    return singleton;
+    return new LiveRegionService();
 }

@@ -1,4 +1,22 @@
-{
-    "id": 1,
-    "region" : "Yorkshire & Humberside"
-}
+[
+    {
+        "id": 1,
+        "name" : "Yorkshire & Humberside"
+    },
+    {
+        "id": 2,
+        "name" : "Yorkshire & Humberside"
+    },
+    {
+        "id": 3,
+        "name" : "Scotland"
+    },
+    {
+        "id": 4,
+        "name" : "Northern Ireland"
+    },
+    {
+        "id": 5,
+        "name" : "North East"
+    }
+]
