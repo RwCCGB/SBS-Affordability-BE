@@ -1,5 +1,4 @@
 [
-
     {
         "id": 1,
         "Text" : "Maintenance/Child Support",
@@ -35,7 +34,7 @@
         "Text" : "Personal (Unsecured) Loans",
         "SubText": "",
         "Type": "B"
-    }
+    },
     {
         "id": 7,
         "Text" : "Student Loans",
