@@ -1,4 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
+import { describe } from "node:test";
 
 jest.mock("../schemas/ping/pingRequestSchema.ts", () => {
   const safeParse = jest.fn();
@@ -26,7 +27,7 @@ function mockNext()
     return jest.fn() as NextFunction; 
 }
 
-describe("ping controller", () => {
+describe("Ping Controller Test Suite", () => {
   beforeEach(() => jest.clearAllMocks());
 
   it("responds with JSON when validation succeeds", async () => {
