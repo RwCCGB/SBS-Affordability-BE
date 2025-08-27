@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { IncomeCategory } from '../models/categories/incomeCategory';
 import { ExpenditureCategory } from '../models/categories/expenditureCategory';
-import { getIncomeTypes } from '../services/factories/factory';
+import { getExpenditureTypes, getIncomeTypes } from '../services/factories/factory';
 export const incomeCategories = async (
   req: Request,
   res: Response,
@@ -23,7 +23,7 @@ export const incomeCategories = async (
   }
 };
 
-export const expenditureCategories = (
+export const expenditureCategories = async (
   req: Request,
   res: Response,
   next: NextFunction,
@@ -32,7 +32,9 @@ export const expenditureCategories = (
     { id: 100, name: 'Council Tax', description: 'Money I pay to the Council' },
   ];
   try {
-    res.json(categories);
+    const service = getExpenditureTypes();
+    const data = await service.getAll();
+    res.json(data);
   } catch (error) {
     next(error);
   }
