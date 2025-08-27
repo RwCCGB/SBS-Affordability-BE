@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "Text": "Guaranteed Other (Before Deductions)"
+    },
+    {
+        "id": 2,
+        "Text": "Non-Guaranteed Other (Before Deductions)"
+    },
+    {
+        "id": 3,
+        "Text": "Net Profit (Sole Trader/Partnership Co)"
+    },
+    {
+        "id": 4,
+        "Text": "Dividends Received (Ltd Comp Only)"
+    },
+    {
+        "id": 5,
+        "Text": "Directors Remuneration (Ltd Comp Only)"
+    },
+    {
+        "id": 6,
+        "Text": "Benefit"
+    },
+    {
+        "id": 7,
+        "Text": "Annual Pension (Before Deductions)"
+    },
+    {
+        "id": 8,
+        "Text": "Maintenance"
+    },
+    {
+        "id": 9,
+        "Text": "Rental Profit Minus Finance Costs"
+    },
+    {
+        "id": 10,
+        "Text": "Contractor Income (Daily Rate X 5 X 48)"
+    }
+]
