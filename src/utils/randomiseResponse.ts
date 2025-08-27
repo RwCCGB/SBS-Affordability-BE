@@ -9,5 +9,4 @@ export function randomiseResponse() : "Success" | "Declined" | "Referred" {
     else{
         return "Referred";
     }
-    return "Referred";
 }
