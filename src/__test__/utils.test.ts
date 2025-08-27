@@ -1,6 +1,23 @@
 import { string } from "zod";
 import { loadMock } from "../utils/fileReader";
 import { stringFormat } from "zod/mini";
+import { calculateLtv } from "../utils/calculateLtv";
+
+describe("CalculateLTV Test Suit",()=>{
+    it("CalculateLTV: Calculate correct LTV", ()=>{
+        expect(calculateLtv(75000, 100000)).toBe(75);
+    })
+    it("CalculateLTV: Calculate correct LTV rounded to 2 decimal places", ()=>{
+        expect(calculateLtv(33333, 100000)).toBe(33.33);
+    })
+    it("CalculateLTV: Throw an error if loanAmount or propertyValue is <= 0", ()=>{
+        expect(() => calculateLtv(0, 100000)).toThrow("Loan amount must be greater than zero");
+        expect(() => calculateLtv(75000, 0)).toThrow("Property value must be greater than zero");
+    })
+    it("CalculateLTV: Throw an error if loanAmount > propertyValue", ()=>{
+        expect(() => calculateLtv(100000, 200)).toThrow("Loan value cannot exceed property value");
+    })
+})
 
 describe("GetRegion Test Suit", ()=>{
     it("GetRegion: Read fileReader JSON mock data", async ()=>{
