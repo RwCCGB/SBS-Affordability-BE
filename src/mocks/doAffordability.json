@@ -1,0 +1,44 @@
+{
+    "applicationDetails": {
+      "numberOfApplicants": 1,
+      "totalAdultDependants": 0,
+      "totalChildDependants": 0,
+      "propertyPrice": 100000,
+      "loanAmount": 50000,
+      "interestRate": 0,
+      "isNewBuild": false,
+      "wantsLongTermFixedRate": false,
+      "repaymentType": "",
+      "mortgageTermYears": 0,
+      "mortgageTermMonths": 0,
+      "regionOfProperty": "",
+      "isMainResidence": true,
+      "feeToBeAdded": 0
+    },
+    "applicants": [
+      {
+        "firstTimeBuyer": false,
+        "employmentStatus": "",
+        "residentialStatus": "",
+        "incomeDetails": {
+          "annualBasicIncome": 0,
+          "hasOtherIncome": true
+        },
+        "expenditure": {
+          "maintenanceChildSupport": 0,
+          "nurseryChildCareCosts": 0,
+          "tuitionFees": 0,
+          "creditCards": 0,
+          "storeCards": 0,
+          "personalLoans": 0,
+          "studentLoans": 0,
+          "residentialMortgageBalance": 0,
+          "helpToBuyEquityLoanBalance": 0,
+          "serviceCharge": 0,
+          "sharedOwnershipRent": 0,
+          "groundRent": 0,
+          "estateRentCharge": 0
+        }
+      }
+    ]
+  }
