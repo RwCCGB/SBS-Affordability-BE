@@ -8,6 +8,16 @@ export const affordabilityRequestSchema = z
     isLongTermFixedProduct: z.boolean(),
     myMortgageApplication: z.object({
       allApplicants: z.array(z.object({
+        allExpenditureItems: z.array(z.object({
+          myApplicant: z.boolean(),
+          expenditureAmount: z.number().positive(),
+          stcExpenditureType: z.int().positive(),
+        })),
+        allIncomeItems: z.array(z.object({
+          myApplicant: z.boolean(),
+          annualAmount: z.number().positive(),
+          stcIncomeType: z.int().positive(),
+        })),
         employmentStatus: z.literal(['E']),
         firstTimeBuyer: z.literal(['Y', 'N']),
         residentialStatus: z.int().positive(),
@@ -31,29 +41,36 @@ export const affordabilityRequestSchema = z
     termMonths: z.int().min(0).max(12),
     termYears: z.int().positive().max(40),
     willBeApplicantsMainResidence: z.boolean(),
-  })
-  .refine(
-    /*TODO: remove this. I put it here merely to demonstrate that you can do conditional validation on combinations of fields*/
-    (data) =>
-      data.repaymentType === 'Interest Only' &&
-      data.region === 'Yorkshire & Humberside',
-    {
-      message:
-        'Interest Only available to residents of Yorkshire & Humberside only',
-      path: ['checkRegion'],
-    },
-  );
+  });
 
 
 /*
 TODO: Remove this. Just put it here so colleagues can test the schema.
-  {
+{
   "interestOnlyAmount": 100000,
   "interestRateOfProduct": 3,
   "isNewBuild": false,
   "isLongTermFixedProduct": true,
   "myMortgageApplication": {
 		"allApplicants": [{
+			"allExpenditureItems": [{
+				"myApplicant": true,
+				"expenditureAmount": 1000.00,
+				"stcExpenditureType": 1
+			}, {
+				"myApplicant": true,
+				"expenditureAmount": 2000.00,
+				"stcExpenditureType": 1				
+			}],
+			"allIncomeItems": [{
+				"myApplicant": true,
+				"annualAmount": 1000.00,
+				"stcIncomeType": 1
+			}, {
+				"myApplicant": true,
+				"annualAmount": 2000.00,
+				"stcIncomeType": 1				
+			}],
 			"employmentStatus": "E",
       "firstTimeBuyer": "Y",
       "residentialStatus": 1
