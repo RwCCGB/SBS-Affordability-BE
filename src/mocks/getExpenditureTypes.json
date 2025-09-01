@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "Text" : "Maintenance/Child Support",
+        "SubText": "",
+        "Type": "M"
+    },
+    {
+        "id": 2,
+        "Text" : "Nursery/Child Care Costs",
+        "SubText": "Total child care costs including child care vouchers",
+        "Type": "M"
+    },
+    {
+        "id": 3,
+        "Text" : "Tuition Fees",
+        "SubText": "",
+        "Type": "A"
+    },
+    {
+        "id": 4,
+        "Text" : "Credit Cards",
+        "SubText": "",
+        "Type": "B"
+    },
+    {
+        "id": 5,
+        "Text" : "Store Cards",
+        "SubText": "",
+        "Type": "B"
+    },
+    {
+        "id": 6,
+        "Text" : "Personal (Unsecured) Loans",
+        "SubText": "",
+        "Type": "B"
+    },
+    {
+        "id": 7,
+        "Text" : "Student Loans",
+        "SubText": "Student loans",
+        "Type": "M"
+    },
+    {
+        "id": 8,
+        "Text" : "Residential Mortgage Balance",
+        "SubText": "",
+        "Type": "B"
+    },
+    {
+        "id": 9,
+        "Text" : "Help To Buy - Equity Loan Balance",
+        "SubText": "",
+        "Type": "B"
+    },
+    {
+        "id": 10,
+        "Text" : "Service Charge",
+        "SubText": "",
+        "Type": "B"
+    },
+    {
+        "id": 11,
+        "Text" : "Shared Ownership - Rent",
+        "SubText": "",
+        "Type": "M"
+    },
+    {
+        "id": 12,
+        "Text" : "Ground Rent",
+        "SubText": "",
+        "Type": "M"
+    },
+    {
+        "id": 13,
+        "Text" : "Estate Rentcharge",
+        "SubText": "",
+        "Type": "M"
+    },
+    {
+        "id": 14,
+        "Text" : "Overdraft",
+        "SubText": "",
+        "Type": "M"
+    }
+]

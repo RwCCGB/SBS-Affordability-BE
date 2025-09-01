@@ -1,10 +1,16 @@
 import { Request, Response, NextFunction } from 'express';
 import { Region } from '../models/regions/region';
+import { loadMock } from '../utils/fileReader';
+import { getRegionService } from '../services/factories/factory';
+import config from '../config/config'
 
-export const regions = (req: Request, res: Response, next: NextFunction) => {
-  const regions: Region[] = [{ id: 1, name: 'Yorkshire & Humberside' }];
+export const regions = async (req: Request, res: Response, next: NextFunction) => {
+
   try {
-    res.json(regions);
+    
+    const service = getRegionService();
+    const data = await service.getAll();
+    res.json(data);
   } catch (error) {
     next(error);
   }

@@ -2,6 +2,7 @@ import * as z from 'zod';
 import { Request, Response, NextFunction } from 'express';
 import { AffordabilityResponse } from '../models/affordability/affordabilityResponse';
 import { affordabilityRequestSchema } from '../schemas/affordability/affordabilityRequestSchema';
+import { calculateLtv } from '../utils/calculateLtv';
 
 export const assessAffordability = (
   req: Request,
@@ -17,6 +18,7 @@ export const assessAffordability = (
       let affordabilityResponse: AffordabilityResponse = {
         maximumLoanAllowed: 100000.0,
         date: new Date(),
+        ltv: calculateLtv(req.body.loanAmount, req.body.propertyValue)
       };
       res.json(affordabilityResponse);
     } else {

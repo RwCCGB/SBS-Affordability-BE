@@ -16,6 +16,7 @@
   "dependencies": {
     "@babel/preset-typescript": "^7.27.1",
     "cor": "^0.0.0",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "zod": "^4.0.17"
   },
