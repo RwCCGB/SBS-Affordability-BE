@@ -1,12 +1,11 @@
-import * as z from 'zod';
 import { Request, Response, NextFunction } from 'express';
 import Status from '../models/ping/status';
 import { PingResponse } from '../models/ping/pingResponse';
-import { pingRequestSchema } from '../schemas/ping/pingRequestSchema';
+import { validatePingRequest } from 'sbs-affordability-types';
 
 export const ping = (req: Request, res: Response, next: NextFunction) => {
   try {
-    const data = pingRequestSchema.safeParse(req.body);
+    const data = validatePingRequest(req.body);
 
     const { success } = data;
 
@@ -19,13 +18,10 @@ export const ping = (req: Request, res: Response, next: NextFunction) => {
       };
       res.json(ping);
     } else {
-      let error: z.ZodError = data.error;
-      let prettyError = z.prettifyError(error);
-      const message = `Ping request schema validation failure. See below for extra detail: ${prettyError}.`;
-
+      const { errorMessage } = data;
       return Promise.reject({
         status: 400,
-        msg: message,
+        msg: errorMessage,
       });
     }
   } catch (error) {

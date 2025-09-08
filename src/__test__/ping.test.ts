@@ -33,7 +33,10 @@ describe("Ping Controller Test Suite", () => {
   it("responds with JSON when validation succeeds", async () => {
     safeParseMock.mockReturnValueOnce({ success: true, data: {} });
 
-    const req = mockReq({});
+    const req = mockReq({
+      checkBackendOnline: true,
+      checkDatabaseOnline: true,
+    });
     const { res, json } = mockRes();
     const next = mockNext();
 
@@ -53,14 +56,17 @@ describe("Ping Controller Test Suite", () => {
       error: { issues: [{ path: ["field"], message: "Required" }] },
     });
   
-    const req = mockReq({});
+    const req = mockReq({
+      x: true,
+      y: true,
+    });
     const { res } = mockRes();
     const next = mockNext();
   
     await expect(ping(req, res, next)).rejects.toEqual(
       expect.objectContaining({
         status: 400,
-        msg: expect.stringMatching(/validation/i),
+        msg: expect.stringMatching(/Ping request schema validation failure/i),
       }),
     );
   

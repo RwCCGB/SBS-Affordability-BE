@@ -1,99 +1,53 @@
 import * as z from 'zod';
 
 export const affordabilityRequestSchema = z.object({
+  numberOfApplicants: z.number().positive().min(1).max(4),
   interestOnlyAmount: z.number().positive().min(10000).max(1000000),
   interestRateOfProduct: z.number().positive().max(10),
-  isNewBuild: z.boolean(),
-  isLongTermFixedProduct: z.boolean(),
+  isNewBuild: z.literal([1, 0]),
+  isLongTermFixedProduct: z.literal([1, 0]),
   myMortgageApplication: z
     .object({
       allApplicants: z.array(
         z.object({
           allExpenditureItems: z.array(
             z.object({
-              myApplicant: z.boolean(),
+              myApplicant: z.literal([1, 0]),
               expenditureAmount: z.number().positive(),
               stcExpenditureType: z.int().positive(),
             }),
           ),
           allIncomeItems: z.array(
             z.object({
-              myApplicant: z.boolean(),
+              myApplicant: z.literal([1, 0]),
               annualAmount: z.number().positive(),
               stcIncomeType: z.int().positive(),
             }),
           ),
-          employmentStatus: z.literal(['E']),
-          firstTimeBuyer: z.literal(['Y', 'N']),
+          employmentStatus: z.literal([1, 2, 3]),
+          firstTimeBuyer: z.literal([1, 0]),
           residentialStatus: z.int().positive(),
         }),
       ),
       applicationSource: z.int().positive(),
       mortgageFees: z.int().positive(),
-      mySharedOwnershipDetails: z.boolean(),
+      mySharedOwnershipDetails: z.literal([1, 0]),
       purchasePrice: z.int().positive(),
       totalLoanAmount: z.number().positive(),
-      useDefaultFeeValue: z.boolean(),
+      useDefaultFeeValue: z.literal([1, 0]),
     })
     .refine(
       (data) => data.purchasePrice > data.totalLoanAmount + data.mortgageFees,
       {
         message:
-          'Total loan amount must be less than the sum of purchase price and mortgage fees',
-        path: ['checkLoanAmount'],
+          "Total loan amount must be less than the sum of purchase price and mortgage fees",
+        path: ["checkLoanAmount"],
       },
     ),
   numberOfDependents: z.int().positive().max(10),
-  region: z.string(),
-  repaymentType: z.literal(['Repayment', 'Interest Only']),
+  region: z.literal([1, 2, 3, 4, 5]),
+  repaymentType: z.literal([1, 2]),
   termMonths: z.int().min(0).max(12),
   termYears: z.int().positive().max(40),
-  willBeApplicantsMainResidence: z.boolean(),
+  willBeApplicantsMainResidence: z.literal([1, 0]),
 });
-
-/*
-TODO: Remove this. Just put it here so colleagues can test the schema.
-{
-  "interestOnlyAmount": 100000,
-  "interestRateOfProduct": 3,
-  "isNewBuild": false,
-  "isLongTermFixedProduct": true,
-  "myMortgageApplication": {
-    "allApplicants": [{
-      "allExpenditureItems": [{
-        "myApplicant": true,
-        "expenditureAmount": 1000.00,
-        "stcExpenditureType": 1
-      }, {
-        "myApplicant": true,
-        "expenditureAmount": 2000.00,
-        "stcExpenditureType": 1       
-      }],
-      "allIncomeItems": [{
-        "myApplicant": true,
-        "annualAmount": 1000.00,
-        "stcIncomeType": 1
-      }, {
-        "myApplicant": true,
-        "annualAmount": 2000.00,
-        "stcIncomeType": 1        
-      }],
-      "employmentStatus": "E",
-      "firstTimeBuyer": "Y",
-      "residentialStatus": 1
-    }],
-    "applicationSource": 1,
-    "mortgageFees": 150,
-    "mySharedOwnershipDetails": true,
-    "purchasePrice": 100000,
-    "totalLoanAmount": 10000,
-    "useDefaultFeeValue": true
-  },
-  "numberOfDependents": 1,
-  "region": "Yorkshire & Humberside",
-  "repaymentType": "Interest Only",
-  "termMonths": 0,
-  "termYears": 25,
-  "willBeApplicantsMainResidence": true
-}
-*/

@@ -1,7 +1,6 @@
-import * as z from 'zod';
 import { Request, Response, NextFunction } from 'express';
 import { AffordabilityResponse } from '../models/affordability/affordabilityResponse';
-import { affordabilityRequestSchema } from '../schemas/affordability/affordabilityRequestSchema';
+import { validateAffordabilityRequest } from 'sbs-affordability-types';
 import { calculateLtv } from '../utils/calculateLtv';
 
 export const assessAffordability = (
@@ -10,7 +9,7 @@ export const assessAffordability = (
   next: NextFunction,
 ) => {
   try {
-    const data = affordabilityRequestSchema.safeParse(req.body);
+    const data = validateAffordabilityRequest(req.body);
 
     const { success } = data;
 
@@ -22,13 +21,11 @@ export const assessAffordability = (
       };
       res.json(affordabilityResponse);
     } else {
-      let error: z.ZodError = data.error;
-      let prettyError = z.prettifyError(error);
-      const message = `Affordability request schema validation failure. See below for extra detail: ${prettyError}.`;
+      const { errorMessage } = data;
 
       return Promise.reject({
         status: 400,
-        msg: message,
+        msg: errorMessage,
       });
     }
   } catch (error) {
