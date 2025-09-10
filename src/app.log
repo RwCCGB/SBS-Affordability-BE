@@ -1,0 +1,56 @@
+{"level":"INFO","time":"2025-09-10T14:51:12.018Z","pid":66901,"hostname":"WD4X3X9C2W","msg":"SBS Affordability Calculator Backend is running"}
+{"level":"INFO","time":"2025-09-10T14:51:15.038Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"SBS Affordability Calculator Backend is running"}
+{"level":"INFO","time":"2025-09-10T14:51:24.552Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"ERROR","time":"2025-09-10T14:51:24.555Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data validation failed and therefore an API reject was issued"}
+{"level":"ERROR","time":"2025-09-10T14:51:24.555Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"error summary as follows: Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
+{"level":"ERROR","time":"2025-09-10T14:51:24.555Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"Bad request error Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
+{"level":"INFO","time":"2025-09-10T14:51:29.495Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"ERROR","time":"2025-09-10T14:51:29.496Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data validation failed and therefore an API reject was issued"}
+{"level":"ERROR","time":"2025-09-10T14:51:29.496Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"error summary as follows: Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
+{"level":"ERROR","time":"2025-09-10T14:51:29.496Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"Bad request error Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
+{"level":"INFO","time":"2025-09-10T14:51:31.001Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"ERROR","time":"2025-09-10T14:51:31.002Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data validation failed and therefore an API reject was issued"}
+{"level":"ERROR","time":"2025-09-10T14:51:31.002Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"error summary as follows: Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
+{"level":"ERROR","time":"2025-09-10T14:51:31.002Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"Bad request error Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
+{"level":"INFO","time":"2025-09-10T14:51:31.695Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"ERROR","time":"2025-09-10T14:51:31.696Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data validation failed and therefore an API reject was issued"}
+{"level":"ERROR","time":"2025-09-10T14:51:31.696Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"error summary as follows: Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
+{"level":"ERROR","time":"2025-09-10T14:51:31.696Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"Bad request error Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
+{"level":"INFO","time":"2025-09-10T14:51:35.987Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:51:35.987Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:51:37.152Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:51:37.152Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:51:37.566Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:51:37.566Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:51:58.568Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:51:58.568Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:51:59.858Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:51:59.859Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:00.054Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:00.055Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:00.246Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:00.247Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:00.420Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:00.420Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:00.593Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:00.593Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:00.766Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:00.766Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:00.910Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:00.911Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:01.069Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:01.070Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:01.229Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:01.229Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:01.392Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:01.392Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:01.554Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:01.554Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:01.723Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:01.723Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:01.899Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"INFO","time":"2025-09-10T14:52:01.899Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data was successfully validated and an API response generated"}
+{"level":"INFO","time":"2025-09-10T14:52:47.693Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"...assessing affordability"}
+{"level":"ERROR","time":"2025-09-10T14:52:47.694Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"affordability data validation failed and therefore an API reject was issued"}
+{"level":"ERROR","time":"2025-09-10T14:52:47.694Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"error summary as follows: Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
+{"level":"ERROR","time":"2025-09-10T14:52:47.695Z","pid":66948,"hostname":"WD4X3X9C2W","msg":"Bad request error Affordability request schema validation failure. See below for extra detail: ✖ Too big: expected number to be <=4\n  → at numberOfApplicants."}
