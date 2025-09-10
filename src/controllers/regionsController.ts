@@ -1,13 +1,11 @@
 import { Request, Response, NextFunction } from 'express';
-import { Region } from '../models/regions/region';
-import { loadMock } from '../utils/fileReader';
 import { getRegionService } from '../services/factories/factory';
-import config from '../config/config'
+import logger from '../logger';
 
 export const regions = async (req: Request, res: Response, next: NextFunction) => {
 
   try {
-    
+    logger.info("...getting regions");
     const service = getRegionService();
     const data = await service.getAll();
     res.json(data);

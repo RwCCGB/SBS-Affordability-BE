@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
+import logger from '../logger';
 
 interface CustomError {
   status?: number;
@@ -29,6 +30,7 @@ export const schemaErrorHandler = (
   if (err.status === 400) {
     /*TODO: tidy this up: I don't think I've done it the correct way.*/
     const customError: CustomError = err;
+    logger.error(`Bad request error ${customError.msg }`);
     res.status(err.status).json({ message: customError.msg });
   }
 };
