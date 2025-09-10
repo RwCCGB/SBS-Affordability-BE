@@ -3,6 +3,7 @@ import cors from "cors";
 import config from "./config/config"
 import routes from './routes/routes';
 import { schemaErrorHandler, errorHandler } from './middleware/errorHandler';
+import logger from "./logger"
 
 const app = express();
 if(config.corsOrigin){
@@ -12,10 +13,14 @@ else{
     app.use(cors());
 }
 
+const msg = "SBS Affordability Calculator Backend is running";
+
+logger.info(msg);
+
 app.use(express.json());
 
 app.get('/', (req, res) =>{
-    res.send("SBS Affordability Calculator Backend is running");
+    res.send(msg);
 })
 app.use('/', routes);
 

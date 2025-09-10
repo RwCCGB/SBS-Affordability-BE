@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { AffordabilityResponse, AffordabilityResult } from '../models/affordability/affordabilityResponse';
 import { validateAffordabilityRequest } from 'sbs-affordability-types';
 import { calculateLtv } from '../utils/calculateLtv';
+import logger from '../logger';
 
 export const assessAffordability = (
   req: Request,
@@ -9,6 +10,7 @@ export const assessAffordability = (
   next: NextFunction,
 ) => {
   try {
+    logger.info("...assessing affordability");
     const data = validateAffordabilityRequest(req.body);
 
     const { success } = data;
@@ -23,9 +25,13 @@ export const assessAffordability = (
         ltv: calculateLtv(req.body.loanAmount, req.body.propertyValue),
         result: pseudoRandomResult ?? AffordabilityResult.Declined,
       };
+      logger.info("affordability data was successfully validated and an API response generated");
       res.json(affordabilityResponse);
     } else {
       const { errorMessage } = data;
+
+      logger.error("affordability data validation failed and therefore an API reject was issued");
+      logger.error(`error summary as follows: ${errorMessage}`);
 
       return Promise.reject({
         status: 400,

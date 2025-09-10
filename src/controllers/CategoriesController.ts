@@ -2,6 +2,8 @@ import { Request, Response, NextFunction } from 'express';
 import { IncomeCategory } from '../models/categories/incomeCategory';
 import { ExpenditureCategory } from '../models/categories/expenditureCategory';
 import { getExpenditureTypes, getIncomeTypes } from '../services/factories/factory';
+import logger from '../logger';
+
 export const incomeCategories = async (
   req: Request,
   res: Response,
@@ -15,6 +17,7 @@ export const incomeCategories = async (
     },
   ];
   try {
+    logger.info("...getting income categories");
     const service = getIncomeTypes();
     const data = await service.getAll();
     res.json(data);
@@ -32,6 +35,7 @@ export const expenditureCategories = async (
     { id: 100, name: 'Council Tax', description: 'Money I pay to the Council' },
   ];
   try {
+    logger.info("...getting expenditure categories");
     const service = getExpenditureTypes();
     const data = await service.getAll();
     res.json(data);
